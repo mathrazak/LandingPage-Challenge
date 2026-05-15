@@ -1,0 +1,272 @@
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* --- Paleta de Cores & Variáveis --- */
+:root {
+    --primary: #009b3a;      /* Verde Brasil sutil */
+    --secondary: #fed100;    /* Amarelo vibrante para detalhes */
+    --dark: #111;
+    --light: #fff;
+    --gray: #666;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links .btn-nav {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.nav-links .btn-nav:hover {
+    background-color: #007a2e;
+    color: var(--light);
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url(assets/bandeira-brasil.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light);
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--dark);
+    text-decoration: none;
+    padding: 15px 35px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e5bd00;
+    transform: translateY(-3px);
+}
+
+/* --- Destinations Section --- */
+.destinations {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.destinations h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--gray);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--light);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.card-content p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: var(--dark);
+}
+
+/* --- Call to Action Section --- */
+.cta-section {
+    background: linear-gradient(rgba(0, 155, 58, 0.85), rgba(0, 155, 58, 0.85)),
+                url('https://images.unsplash.com/photo-1597014937492-959f67a21f7c?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--light);
+}
+
+.cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--light);
+    color: var(--primary);
+    text-decoration: none;
+    padding: 15px 35px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark);
+    color: #888;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+
+footer p:first-child {
+    margin-bottom: 10px;
+}
+
+/* --- Responsividade (Media Queries) --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .nav-links {
+        margin-top: 20px;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+}
