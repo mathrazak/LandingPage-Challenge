@@ -205,7 +205,7 @@ body {
 /* --- Call to Action Section --- */
 .cta-section {
     background: linear-gradient(rgba(0, 155, 58, 0.85), rgba(0, 155, 58, 0.85)),
-                url('https://images.unsplash.com/photo-1597014937492-959f67a21f7c?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+                url(assets/cta-background.jpg) no-repeat center center/cover;
     padding: 100px 20px;
     text-align: center;
     color: var(--light);
